@@ -3,9 +3,16 @@ Input: a List of integers as well as an integer `k` representing the size of the
 Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
-    # Your code here
-
-    pass
+    # get the max out of k
+    # how many times does the window have to iterate, how does it stop?
+    passes = len(nums) - k + 1
+    max_nums = []
+    for i in range(passes):
+        copy = nums[:]
+        max_num = max(copy[i : i + k])
+        max_nums.append(max_num)
+    
+    return max_nums
 
 
 if __name__ == '__main__':
