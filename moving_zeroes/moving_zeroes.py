@@ -2,6 +2,7 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+# 0(n)
 def moving_zeroes(arr):
     # check if number is not 0, if true append it to new array
     # if they are zero add it to zeros array
@@ -10,8 +11,8 @@ def moving_zeroes(arr):
     non_zero = []
     zero =[]
 
-    for i in arr:
-        if i == 0:
+    for i in arr: #O(n)
+        if i == 0:  #O(1)
             zero.append(i)
         else:
             non_zero.append(i)

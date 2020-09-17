@@ -2,20 +2,22 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+
+# O(n^2)
 def product_of_all_other_numbers(arr):
     # not multiplying by the index at value is equal to multiplying by 1 
     # how do you change the value at a index without changing the original array
     # once the value is changed multiply all numbers 
 
-    multiplied = [0 for _ in arr]
+    multiplied = [0 for _ in arr]  # O(n)
 
-    for i in range(len(arr)):
+    for i in range(len(arr)): # O(n)
         copy = arr[:]
         # copy has a value of 1 at the index, original array not changed
         copy[i] = 1
         # multiply all numbers in the copy array
         result = 1
-        for x in copy:
+        for x in copy: # O(n)
             result *= x
        
         multiplied[i] = result
